@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import globe from './planet-earth.svg'
 
 export default (props) => {
     return (
@@ -7,6 +8,8 @@ export default (props) => {
             <marquee>
                 <h1>Hello World!</h1>
             </marquee>
+
+            <img src={globe} />
         </div>
     )
 }

@@ -1,0 +1,12 @@
+.home {
+    width: 50%;
+    margin: auto;
+}
+
+.home marquee {
+    /* width: 50%; */
+    margin: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: black 5px 5px 5px 1px;
+}

@@ -1,11 +1,19 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Greeting = sequelize.define('Greeting', {
-    body: DataTypes.STRING,
-    userId: DataTypes.INTEGER
+    body: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    }
   }, {});
   Greeting.associate = function(models) {
-    // associations can be defined here
+    Greeting.belongsTo(models.User, {
+      foreignKey: 'userId',
+    })
   };
   return Greeting;
 };
